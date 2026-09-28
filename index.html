@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070707" />
+  <meta name="description" content="Offlyne is the app for meeting people in the places you already go. Go live at your venue, pick what you're here for — Friends, Dating or Network — and meet in real life." />
+  <title>Offlyne — real people, real places, in real life</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-coral-32.png?v=3" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/offlyne-app-icon-192.png?v=3" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>:root{--black:#070707;--paper:#fdfdfd;--gray:#999;--coral:#f0685c;font-family:'Instrument Sans',Arial,sans-serif;color:var(--paper);background:var(--black)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px}a{color:inherit;text-decoration:none}button,a{ -webkit-tap-highlight-color:transparent}a:focus-visible{outline:2px solid var(--paper);outline-offset:5px}img{display:block;max-width:100%}.skip{position:absolute;left:12px;top:-60px;padding:12px;background:var(--paper);color:var(--black);z-index:30}.skip:focus{top:12px}.site-header{height:78px;padding:0 clamp(22px,4.8vw,80px);display:flex;align-items:center;gap:42px;background:var(--black);position:relative;z-index:5}.wordmark{font:400 31px/1 Anton,Impact,sans-serif;letter-spacing:-.02em}.mark-period{color:var(--coral)}.site-header nav{display:flex;gap:36px;margin-left:auto;font-size:13px;font-weight:600}.site-header nav a:hover{opacity:.6}.header-status{font-size:10px;letter-spacing:.18em;border:1px solid #666;border-radius:30px;padding:9px 12px;white-space:nowrap}.hero{min-height:min(780px,calc(100svh - 78px));height:710px;position:relative;overflow:hidden;background:#242424}.hero-photo{width:100%;height:100%;object-fit:cover;object-position:center 47%;position:absolute;inset:0}.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.12) 72%),linear-gradient(0deg,rgba(0,0,0,.7),transparent 45%)}.hero-topline{position:absolute;top:30px;left:clamp(22px,5vw,80px);right:clamp(22px,5vw,80px);display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:.19em}.hero-copy{position:absolute;left:clamp(22px,5vw,80px);right:clamp(22px,5vw,80px);bottom:64px}.hero h1{font:400 clamp(76px,11.5vw,174px)/.9 Anton,Impact,sans-serif;margin:0;letter-spacing:-.012em}.hero h1 span{display:block}.hero h1 em{font-style:normal;color:var(--paper)}.hero-bottom{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-top:20px}.hero-bottom p{font-size:clamp(19px,2.2vw,29px);line-height:1.2;margin:0;font-weight:600}.pill{height:56px;min-width:206px;border-radius:999px;display:inline-flex;justify-content:space-between;align-items:center;gap:35px;padding:0 25px;font-size:15px;font-weight:700;transition:transform .2s,background .2s}.pill:hover{transform:translateY(-3px)}.pill-primary{background:linear-gradient(180deg,#fff 0%,#fdfdfd 55%,#dedede 100%);color:#080808;box-shadow:inset 0 1px #fff,0 5px 22px #fff3}.pill span{font-size:22px;font-weight:400}.photo-credit{position:absolute;right:20px;bottom:12px;color:#ffffffa6;font-size:10px}.section-pad{padding:clamp(80px,10vw,150px) clamp(22px,8vw,130px)}.eyebrow{font-size:11px;letter-spacing:.2em;font-weight:700;display:flex;align-items:center;gap:14px}.eyebrow-line{display:inline-block;width:27px;height:1px;background:currentColor}.intro{background:var(--paper);color:var(--black)}.intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:end;margin-top:55px}.intro h2,.section-heading h2,.experience h2,.control h2,.closing h2{font:400 clamp(66px,8.5vw,132px)/.96 Anton,Impact,sans-serif;letter-spacing:-.015em;margin:0}.intro h2 i,.section-heading h2 i,.experience h2 i,.control h2 i,.closing h2 i{font-style:normal;color:#858585}.intro-copy{max-width:485px;padding-bottom:7px}.intro-copy p{font-size:clamp(18px,1.5vw,22px);line-height:1.48;margin:0 0 23px}.how{background:#101010}.section-heading{display:flex;align-items:end;justify-content:space-between}.section-heading h2{text-align:right}.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:95px;border-top:1px solid #666}.step{padding:22px 24px 8px 0;border-right:1px solid #444;min-height:330px}.step:not(:first-child){padding-left:24px}.step:last-child{border-right:0}.step-index{font-size:12px;letter-spacing:.12em;color:#aaa}.step-icon{font-size:44px;height:90px;display:flex;align-items:center;font-weight:400}.step h3{font-size:21px;line-height:1.2;margin:0 0 16px}.step p{font-size:15px;line-height:1.55;color:#bdbdbd;margin:0;max-width:255px}.experience{background:var(--paper);color:var(--black);padding-bottom:0;overflow:hidden}.experience-head{display:flex;justify-content:space-between;align-items:end;gap:30px}.experience-head h2{margin-top:32px}.experience-head>p{font-size:20px;line-height:1.4;max-width:345px}.phone-stage{margin-top:72px;min-height:650px;background:#181818;color:var(--paper);border-radius:20px 20px 0 0;display:grid;grid-template-columns:1fr 1.12fr 1fr;align-items:center;overflow:hidden;padding:45px clamp(20px,4vw,70px) 0;gap:30px}.editorial-note{align-self:center}.editorial-note>span,.stage-side .intent-row{font-size:11px;letter-spacing:.16em;font-weight:700}.editorial-note strong{font:400 clamp(36px,4vw,66px)/1.05 Anton,Impact,sans-serif;display:block;margin-top:25px}.editorial-note p,.stage-side p{font-size:15px;line-height:1.5;color:#aaa;max-width:235px}.phone{width:min(100%,318px);height:628px;border:7px solid #050505;border-radius:44px 44px 0 0;box-shadow:0 0 0 2px #444,0 20px 60px #0009;margin:auto auto -6px;background:#070707;overflow:hidden}.phone-screen{height:100%;padding:16px 12px 0;position:relative}.phone-status{display:flex;justify-content:space-between;font-size:12px;font-weight:700;padding:0 11px 22px}.phone-title{display:flex;align-items:center;justify-content:space-between;font:400 31px Anton,Impact,sans-serif}.live-dot{font:700 9px 'Instrument Sans',sans-serif;color:var(--coral);letter-spacing:.1em}.venue{font-size:13px;font-weight:600;padding:14px 0 18px}.venue span{float:right}.segmented{height:34px;background:#202020;border-radius:9px;display:flex;font-size:12px;text-align:center;padding:3px;margin-bottom:12px}.segmented span{width:50%;display:grid;place-items:center;color:#aaa}.segmented .selected{color:#fff;background:#3d3d3d;border-radius:7px}.tiles{display:grid;grid-template-columns:1fr 1fr;gap:9px}.tile{height:189px;position:relative;border-radius:11px;overflow:hidden;background:#333}.tile img{height:100%;width:100%;object-fit:cover}.tile:after{content:'';position:absolute;inset:55% 0 0;background:linear-gradient(transparent,#000d)}.tile div{position:absolute;bottom:10px;left:9px;z-index:1}.tile strong{font:400 24px Anton,Impact,sans-serif;display:block}.tile small{font-size:9px}.tile-placeholder{display:grid;place-items:center;text-align:center;font:400 25px/1 Anton,Impact,sans-serif}.tile-placeholder b{font-size:41px}.phone-nav{height:58px;position:absolute;bottom:0;left:8px;right:8px;border-radius:15px 15px 0 0;background:#1c1c1c;display:flex;justify-content:space-around;align-items:center}.phone-nav span{display:grid;place-items:center;color:#ddd;font-size:17px;width:20%}.phone-nav small{font-size:9px;margin-top:2px}.phone-nav .nav-live{color:var(--coral)}.stage-side{align-self:end;padding-bottom:65px}.intent-row{display:flex;flex-direction:column;gap:14px}.intent-row span{border:1px solid #777;border-radius:50px;padding:11px 14px;width:max-content}.stage-side p{margin-top:44px}.control{display:grid;grid-template-columns:1fr 2fr;gap:40px;min-height:520px;align-items:center;background:#111}.control-label{align-self:start;font-size:11px;letter-spacing:.2em;display:flex;align-items:center;gap:12px}.control h2 i{color:#777}.control p{font-size:clamp(17px,1.8vw,23px);line-height:1.5;max-width:675px;color:#ccc;margin:35px 0 0}.closing{text-align:center;background:var(--paper);color:var(--black);min-height:560px;display:flex;align-items:center;justify-content:center;flex-direction:column}.closing h2{margin:35px 0 40px}.closing .pill{border:1px solid #111;box-shadow:none}footer{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:36px clamp(22px,5vw,80px);background:#070707}footer span{font-size:11px;letter-spacing:.13em;color:#aaa}footer .wordmark span{font-size:inherit;color:var(--coral);letter-spacing:0}@media(max-width:900px){.site-header nav{gap:16px}.header-status{display:none}.hero h1{font-size:clamp(70px,12vw,120px)}.intro-grid{grid-template-columns:1fr;gap:26px}.section-heading{display:block}.section-heading h2{text-align:left;margin-top:35px}.steps{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid #444}.phone-stage{grid-template-columns:1fr 1fr}.stage-side{display:none}.control{grid-template-columns:1fr;gap:50px}.experience-head>p{max-width:260px}}@media(max-width:620px){.site-header{height:64px;padding:0 20px}.wordmark{font-size:28px}.site-header nav{margin-left:auto;gap:16px;font-size:12px}.site-header nav a:nth-child(2){display:none}.hero{height:calc(100svh - 64px);min-height:650px;max-height:850px}.hero-photo{object-position:56% center}.hero-shade{background:linear-gradient(0deg,#000d 0%,#0005 65%,#0006)}.hero-topline{top:22px;left:20px;right:20px;font-size:9px}.hero-copy{left:20px;right:20px;bottom:65px}.hero h1{font-size:clamp(62px,17vw,110px);line-height:.98}.hero-bottom{display:block}.hero-bottom p{font-size:18px;margin:22px 0}.photo-credit{right:20px;font-size:9px}.section-pad{padding:82px 23px}.intro h2,.section-heading h2,.experience h2,.control h2,.closing h2{font-size:clamp(59px,14vw,91px)}.intro-grid{margin-top:38px}.intro-copy p{font-size:18px}.steps{margin-top:52px;grid-template-columns:1fr}.step,.step:not(:first-child){min-height:0;padding:22px 0 32px;border-right:0;border-bottom:1px solid #444}.step-icon{height:65px}.step h3{font-size:21px}.step p{font-size:16px}.experience{padding-bottom:0}.experience-head{display:block}.experience-head>p{font-size:18px;margin-top:30px}.phone-stage{margin:55px -23px 0;border-radius:0;display:block;min-height:0;padding:45px 20px 0}.editorial-note{margin:0 auto 40px;max-width:318px}.editorial-note strong{font-size:40px}.editorial-note p{max-width:none}.phone{height:590px}.tile{height:173px}.control{min-height:0}.control p{font-size:18px}footer{flex-wrap:wrap;gap:20px;padding:38px 23px}footer>span:nth-child(2){width:100%;order:3}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pill{transition:none}}
+
+/* Updated showcase */
+.hero-photo{object-position:center 42%}.intro h2{font-size:clamp(62px,7.4vw,112px)}.showcase-label{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-top:65px}.showcase-label strong{font-size:24px}.showcase-label span{font-size:16px;color:#666}.phone-stage.two-views{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:55px;margin-top:25px;padding:40px 55px 45px;border-radius:20px;min-height:0}.view-column{min-width:0}.view-label{max-width:318px;margin:0 auto 22px;font-size:10px;font-weight:700;letter-spacing:.13em;color:#ccc;display:flex;justify-content:space-between}.view-label span{color:#999;letter-spacing:0;font-weight:400}.two-views .phone{height:630px;border-radius:44px;margin-bottom:0}.two-views .phone-nav{bottom:12px;border-radius:15px}.showcase-grid{max-height:390px;overflow:auto;padding-bottom:18px;scrollbar-width:thin;scrollbar-color:#666 #222}.showcase-grid .tile{height:188px}.showcase-grid .tile small{font-size:10px;line-height:1.3;display:block;max-width:110px}.map-preview{height:390px;position:relative;border-radius:12px;overflow:hidden;background:#252525}.map-art{width:100%;height:100%;object-fit:cover}.map-person{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;flex-direction:column}.map-person img{height:43px;width:43px;object-fit:cover;border:3px solid #fdfdfd;border-radius:50%;box-shadow:0 3px 9px #0009}.map-person span{font-size:10px;background:#fdfdfd;color:#070707;border-radius:20px;padding:3px 7px;margin-top:2px;font-weight:700}.map-key{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:10px;background:#070707dd;border-radius:20px;padding:7px 10px}.showcase-caption{font-size:12px;text-align:center;color:#666;padding:18px 0 40px;margin:0}.closing h2{font-size:clamp(60px,7.8vw,115px)}@media(max-width:900px){.phone-stage.two-views{padding:35px 24px;gap:25px}.intro h2{font-size:clamp(60px,9vw,95px)}}@media(max-width:620px){.showcase-label{display:block;margin-top:45px}.showcase-label span{display:block;margin-top:10px}.phone-stage.two-views{display:flex;flex-direction:column;margin:25px -23px 0;padding:35px 20px;gap:42px;border-radius:0}.view-column{width:100%}.two-views .phone{width:318px;max-width:100%}.showcase-grid .tile{height:188px}.showcase-caption{padding:18px 4px 25px}.hero-photo{object-position:58% center}}
+
+.wordmark{display:inline-flex;align-items:center;gap:10px}.brand-pin{width:23px;height:39px;object-fit:contain}.design-map-phone{position:relative}.design-map-phone iframe{display:block;border:0;width:100%;height:100%;background:#070606}.two-views .design-map-phone{height:688px}.two-views{align-items:start}.view-column:has(.design-map-phone){align-self:start}@media(max-width:620px){.brand-pin{width:20px;height:34px}.wordmark{gap:7px}.site-header{gap:15px}}
+/* ====================================================================
+   Offlyne showcase — app screen gallery + capabilities grid
+   Appended to style.css. Prefixed so nothing above is touched.
+   ==================================================================== */
+
+/* ---------- theme lock ----------------------------------------------
+   style.css sets text colour once on :root and lets everything inherit.
+   Any wrapper that declares its own body colour (preview panes, embeds,
+   CMS shells, reader modes) beats that inheritance and the dark sections
+   go black-on-black. Pin every colour that was relying on inheritance.
+   -------------------------------------------------------------------- */
+html{background:#070707}
+body{background:#070707;color:#fdfdfd;font-family:'Instrument Sans',Arial,sans-serif}
+.site-header,.site-header .wordmark,.site-header nav a{color:#fdfdfd}
+.hero,.hero h1,.hero h1 span,.hero h1 em,.hero-topline,.hero-bottom p{color:#fdfdfd}
+.how,.how .section-heading h2,.how .eyebrow,.step h3{color:#fdfdfd}
+.how .section-heading h2 i{color:#858585}
+.control,.control h2,.control-label{color:#fdfdfd}
+.control h2 i{color:#777}
+footer,footer .wordmark{color:#fdfdfd}
+footer>span{color:#aaa}
+.phone-stage,.phone-stage .phone-screen{color:#fdfdfd}
+/* light sections re-assert their own ink */
+.intro,.experience,.caps,.closing{color:#070707}
+.intro h2 i,.experience h2 i,.closing h2 i{color:#858585}
+
+/* ---------- feature section ---------- */
+.appshow{background:#0b0b0b;color:var(--paper);padding:clamp(80px,10vw,145px) clamp(22px,8vw,130px) clamp(70px,9vw,120px)}
+.appshow-head{display:flex;justify-content:space-between;align-items:end;gap:40px}
+.appshow-head h2{font:400 clamp(60px,7.6vw,118px)/.95 Anton,Impact,sans-serif;letter-spacing:-.015em;margin:14px 0 0;color:#fdfdfd}
+.appshow-head h2 i{font-style:normal;color:#767676}
+.appshow-head>p{font-size:19px;line-height:1.45;max-width:355px;color:#b4b4b4;margin:0 0 6px}
+
+/* alternating rows: copy one side, screen the other */
+.frows{display:grid;gap:clamp(78px,9vw,135px);margin-top:clamp(64px,7vw,110px)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,90px);align-items:center}
+.frow:nth-child(even) .frow-art{order:-1}
+.frow-txt{max-width:465px}
+.frow:nth-child(even) .frow-txt{justify-self:end}
+.frow-k{font-size:10px;letter-spacing:.18em;font-weight:700;color:var(--coral)}
+.frow-txt h3{font:400 clamp(36px,4vw,54px)/1.04 Anton,Impact,'Arial Narrow',sans-serif;letter-spacing:-.012em;
+  margin:15px 0 17px;color:#fdfdfd}
+.frow-txt p{font-size:17px;line-height:1.58;color:#b4b4b4;margin:0}
+.frow-list{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:11px}
+.frow-list li{position:relative;padding-left:22px;font-size:14.5px;line-height:1.45;color:#dcdbda}
+.frow-list li::before{content:'';position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;
+  background:var(--coral)}
+.frow-art{display:flex;justify-content:center;min-width:0}
+
+/* three supporting screens */
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(26px,3.4vw,46px);
+  margin-top:clamp(78px,9vw,130px);padding-top:clamp(56px,6vw,86px);border-top:1px solid #2b2b2b}
+.fcell{display:grid;justify-items:center;text-align:center;min-width:0}
+.fcell-art{display:flex;justify-content:center;width:100%}
+.fcell h3{font-size:19px;line-height:1.25;margin:30px 0 10px;letter-spacing:-.01em;color:#fdfdfd}
+.fcell p{font-size:14.5px;line-height:1.55;color:#a3a2a1;margin:0;max-width:300px}
+
+/* ---------- phone shell ---------- */
+.ofs{width:318px;height:652px;border-radius:44px;background:#070606;position:relative;
+  overflow:hidden;box-shadow:0 0 0 8px #0a0a0a,0 0 0 10px #3c3c3c,0 26px 58px #000b;
+  font-family:'Instrument Sans',Arial,sans-serif;color:var(--paper);
+  /* the stacked row layout centres its copy; app UI must not inherit that */
+  text-align:left}
+.ofs *{box-sizing:border-box}
+.ofs svg{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;
+  width:100%;height:100%;display:block}
+.ofs-scr{position:absolute;inset:0;padding:13px 13px 0;display:flex;flex-direction:column}
+.ofs-notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:78px;height:5px;
+  border-radius:9px;background:#161616;z-index:9}
+.ofs-hero{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.ofs-hero--dim{filter:saturate(.75) brightness(.6);object-position:center 34%}
+.ofs-hero-sh{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(7,6,6,.72) 0 14%,rgba(7,6,6,.05) 34%,rgba(7,6,6,.9) 66%,#070606 88%)}
+.ofs-scrim{position:absolute;inset:0;z-index:1;background:rgba(7,6,6,.55)}
+/* everything that isn't the backdrop sits above it */
+.ofs--photo .ofs-scr>*:not(.ofs-hero):not(.ofs-hero-sh):not(.ofs-scrim){position:relative;z-index:2}
+
+/* status bar */
+.ofs-bar{display:flex;justify-content:space-between;align-items:center;font-size:11px;
+  font-weight:700;padding:3px 7px 15px;flex:none}
+.ofs-bar-r{display:flex;align-items:center;gap:3px}
+.ofs-bar-r .sig{width:3px;border-radius:1px;background:#fdfdfd}
+.ofs-bar-r .sig:nth-child(1){height:5px}.ofs-bar-r .sig:nth-child(2){height:7px}
+.ofs-bar-r .sig:nth-child(3){height:9px}
+.ofs-bar-r .bat{width:17px;height:9px;border:1.2px solid #fdfdfd;border-radius:2.5px;margin-left:4px;
+  position:relative;background:linear-gradient(90deg,#fdfdfd 72%,transparent 72%);background-clip:content-box;padding:1px}
+
+/* headings inside phone */
+.ofs-h1{font:400 30px/1 Anton,Impact,sans-serif;letter-spacing:-.01em;flex:none}
+.ofs-h2{font:400 25px/1 Anton,Impact,sans-serif;margin:16px 0 0}
+.ofs-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex:none}
+.ofs-top--over{padding-top:2px}
+.ofs-ib{width:33px;height:33px;border-radius:999px;background:#1b1a1a;border:1px solid #2b2a2a;
+  display:grid;place-items:center;flex:none;position:relative}
+.ofs-ib svg{width:16px;height:16px}
+.ofs-ib.gl{background:rgba(7,6,6,.5);border-color:rgba(253,253,253,.32);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.ofs-ib.sm{width:29px;height:29px}
+.ofs-ib .dot,.ofs-nav .dot{position:absolute;top:5px;right:6px;width:7px;height:7px;border-radius:50%;
+  background:var(--coral);box-shadow:0 0 0 2px #070606}
+.ofs-lbl{font-size:9.5px;letter-spacing:.15em;font-weight:700;color:#8e8d8c;margin:17px 0 9px;flex:none}
+.ofs-fine{font-size:10.5px;line-height:1.5;color:#7e7d7c;margin-top:12px}
+.ofs-fine--c{text-align:center;margin:12px 0 0}
+
+/* ---------- intention marks: shape = which, fill = shared ---------- */
+.im{display:inline-flex;gap:4px;align-items:center;flex:none}
+.im s{all:unset;display:grid;place-items:center;width:19px;height:19px;border-radius:999px;
+  border:1px solid transparent;flex:none;box-sizing:border-box}
+.im s svg{width:11px;height:11px;stroke-width:2.1}
+.im s.sh{background:#fdfdfd;color:#070606}
+.im s.th{border-color:#5f5e5e;color:#a7a6a5}
+.im s.no{border-color:transparent}
+.im s.no::after{content:'';width:3px;height:3px;border-radius:50%;background:#343333}
+.im--xs s{width:16px;height:16px}
+.im--xs s svg{width:9px;height:9px}
+.ofs--photo .im s.th{border-color:rgba(253,253,253,.62);color:#fdfdfd}
+.ofs--photo .im s.sh{box-shadow:0 2px 6px rgba(0,0,0,.5)}
+
+/* intention chips (labelled) */
+.ichip{display:inline-flex;align-items:center;gap:6px;height:29px;padding:0 12px;border-radius:999px;
+  font-size:12px;font-weight:600;border:1px solid transparent;white-space:nowrap}
+.ichip svg{width:13px;height:13px;stroke-width:2.1;flex:none}
+.ichip--sh{background:#fdfdfd;color:#070606}
+.ichip--th{border-color:rgba(253,253,253,.5);color:#d8d7d6;font-weight:500}
+.ofs-chips{display:flex;flex-wrap:wrap;gap:6px}
+.ofs-chips--tight .ichip{height:27px;font-size:11.5px}
+
+/* ---------- bottom nav ---------- */
+.ofs-nav{position:absolute;left:11px;right:11px;bottom:11px;height:57px;border-radius:19px;
+  background:#131212;border:1px solid #242323;display:flex;align-items:center;justify-content:space-around;z-index:6}
+.ofs-nav i{display:grid;place-items:center;gap:3px;color:#8b8a89;width:20%;font-style:normal;position:relative}
+.ofs-nav i svg{width:19px;height:19px}
+.ofs-nav i u{text-decoration:none;font-size:8.5px;letter-spacing:.04em;font-weight:600}
+.ofs-nav i.on{color:#fdfdfd}
+.ofs-nav i.live{color:var(--coral)}
+
+/* ---------- 01 go live ---------- */
+.ofs-venue{display:flex;align-items:center;gap:11px;background:#131212;border:1px solid #242323;
+  border-radius:15px;padding:13px;margin-top:15px;flex:none}
+.ofs-venue>svg{width:19px;height:19px;flex:none;color:var(--coral)}
+.ofs-venue span{display:grid;flex:1;min-width:0}
+.ofs-venue b{font-size:14px;font-weight:700}
+.ofs-venue small{font-size:10.5px;color:#8b8a89;margin-top:2px}
+.ofs-venue em{font-style:normal;font-size:11px;font-weight:700;color:var(--coral);flex:none}
+.ofs-picks{display:grid;gap:8px;flex:none}
+.pick{all:unset;display:flex;align-items:center;gap:11px;height:50px;padding:0 14px;border-radius:14px;
+  border:1px solid #2b2a2a;background:#0f0e0e;cursor:default;box-sizing:border-box}
+.pick svg{width:18px;height:18px;flex:none;color:#a7a6a5}
+.pick b{font-size:14px;font-weight:600;flex:1}
+.pick i{width:21px;height:21px;border-radius:999px;border:1.4px solid #3d3c3c;display:grid;place-items:center;flex:none}
+.pick i svg{width:11px;height:11px;stroke-width:2.6}
+.pick.on{background:#fdfdfd;color:#070606;border-color:#fdfdfd}
+.pick.on svg{color:#070606}
+.pick.on i{background:#070606;border-color:#070606;color:#fdfdfd}
+.ofs-picks--row{display:flex;gap:7px}
+.ofs-picks--row .pick{flex:1;flex-direction:column;justify-content:center;gap:5px;height:66px;padding:0 6px}
+.ofs-picks--row .pick b{flex:none;font-size:11.5px}
+.ofs-seg3{display:flex;gap:4px;background:#161515;border:1px solid #242323;border-radius:12px;padding:4px;flex:none}
+.ofs-seg3 span{flex:1;text-align:center;font-size:12px;font-weight:600;padding:9px 0;border-radius:9px;color:#9a9998}
+.ofs-seg3 .on{background:#343333;color:#fdfdfd}
+.ofs-cta{all:unset;display:flex;align-items:center;justify-content:center;gap:9px;height:52px;
+  border-radius:999px;background:linear-gradient(180deg,#fff,#e6e6e4);color:#070606;
+  font-size:15px;font-weight:700;margin-top:auto;margin-bottom:78px;cursor:default;
+  box-shadow:inset 0 1px 0 #fff,0 8px 20px rgba(253,253,253,.14)}
+.ofs-cta svg{width:17px;height:17px;stroke-width:2.2}
+
+/* ---------- 02 grid ---------- */
+.ofs-strip{display:flex;gap:10px;align-items:flex-start;background:#131212;border:1px solid #242323;
+  border-radius:14px;padding:11px 12px;margin:13px 0 11px;flex:none}
+.ofs-strip .ld{width:8px;height:8px;border-radius:50%;background:var(--session-green,#4cd787);
+  margin-top:4px;flex:none;box-shadow:0 0 0 3px rgba(76,215,135,.18)}
+.ofs-strip b{font-size:12px;font-weight:700;display:block}
+.ofs-strip b span{color:#8b8a89;font-weight:500}
+.ofs-strip-i{display:flex;align-items:center;gap:7px;font-size:10px;color:#9a9998;margin-top:6px}
+.ofs-seg2{display:flex;gap:4px;background:#161515;border:1px solid #242323;border-radius:11px;padding:3px;margin-bottom:11px;flex:none}
+.ofs-seg2 span{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;
+  font-weight:600;padding:8px 0;border-radius:8px;color:#9a9998}
+.ofs-seg2 svg{width:13px;height:13px}
+.ofs-seg2 .on{background:#343333;color:#fdfdfd}
+.ofs-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;overflow:hidden;flex:1;min-height:0;
+  align-content:start;
+  mask-image:linear-gradient(#000 64%,transparent 94%);-webkit-mask-image:linear-gradient(#000 64%,transparent 94%)}
+.gt{position:relative;height:150px;border-radius:13px;overflow:hidden;background:#242323}
+.gt img{width:100%;height:100%;object-fit:cover}
+.gt::after{content:'';position:absolute;inset:48% 0 0;background:linear-gradient(transparent,rgba(7,6,6,.92))}
+.gt-m{position:absolute;top:8px;left:8px;z-index:2}
+.gt-b{position:absolute;bottom:9px;left:10px;z-index:2}
+.gt-b strong{font:400 21px/1 Anton,Impact,sans-serif;display:block}
+.gt-b small{font-size:9.5px;color:#d5d4d3}
+
+/* ---------- 03 reveal ---------- */
+.ofs-rev{margin-top:auto;padding-bottom:16px}
+.ofs-here{font-size:9px;letter-spacing:.14em;font-weight:700;color:var(--session-green,#4cd787)}
+.ofs-name{font:400 44px/1 Anton,Impact,sans-serif;letter-spacing:-.015em;margin:8px 0 11px}
+.ofs-bio{font-size:12.5px;line-height:1.5;color:#d3d2d1;margin:13px 0 0}
+.ofs-shared{display:flex;align-items:baseline;gap:9px;margin-top:14px;padding-top:13px;border-top:1px solid rgba(253,253,253,.16)}
+.ofs-shared b{font-size:12px;font-weight:700;flex:none}
+.ofs-shared span{font-size:11px;color:#a9a8a7}
+.ofs-acts{display:grid;gap:8px;margin-top:16px}
+.ofs-acts .ofs-cta{margin:0}
+.ofs-ghost{all:unset;display:grid;place-items:center;height:44px;border-radius:999px;
+  border:1px solid rgba(253,253,253,.34);font-size:13px;font-weight:600;cursor:default}
+
+/* ---------- 04 requests ---------- */
+.ofs-tabs{display:flex;gap:18px;border-bottom:1px solid #242323;margin:14px 0 4px;flex:none}
+.ofs-tabs span{font-size:12px;font-weight:600;color:#8b8a89;padding:0 0 10px;display:flex;gap:5px;align-items:center}
+.ofs-tabs b{font-size:9.5px;background:#242323;color:#c9c8c7;border-radius:999px;padding:2px 6px}
+.ofs-tabs .on{color:#fdfdfd;box-shadow:inset 0 -2px 0 #fdfdfd}
+.ofs-tabs .on b{background:var(--coral);color:#070606}
+.ofs-list{overflow:hidden;margin-top:6px;
+  mask-image:linear-gradient(#000 84%,transparent);-webkit-mask-image:linear-gradient(#000 84%,transparent)}
+.ofs-div{font-size:9px;letter-spacing:.15em;font-weight:700;color:#7e7d7c;margin:16px 0 8px}
+.rq{display:flex;align-items:center;gap:11px;padding:10px 0;border-bottom:1px solid #1d1c1c}
+.rq img{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none}
+.rq-t{flex:1;min-width:0;display:grid;gap:5px}
+.rq-t b{font-size:14px;font-weight:700}
+.rq-t small{font-size:10px;color:#8b8a89}
+.rq-a{display:flex;gap:6px;flex:none}
+.rq-a button{all:unset;width:34px;height:34px;border-radius:999px;display:grid;place-items:center;cursor:default}
+.rq-a button svg{width:15px;height:15px;stroke-width:2.4}
+.rq-a .yes{background:#fdfdfd;color:#070606}
+.rq-a .no{border:1px solid #3d3c3c;color:#a7a6a5}
+.pend{font-size:10px;font-weight:700;color:#8b8a89;border:1px solid #333232;border-radius:999px;padding:5px 9px;flex:none}
+.rq--sent img{filter:grayscale(.45)}
+
+/* ---------- 05 chats ---------- */
+.ch{display:flex;gap:11px;align-items:center;padding:11px 0;border-bottom:1px solid #1d1c1c}
+.ch img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none}
+.ch-t{flex:1;min-width:0}
+.ch-r1{display:flex;align-items:center;gap:7px}
+.ch-r1 b{font-size:14px;font-weight:700}
+.ch-ti{margin-left:auto;font-size:9.5px;color:#7e7d7c;flex:none}
+.ch-r2{display:flex;align-items:center;gap:8px;margin-top:4px}
+.ch-r2 small{font-size:11px;color:#8b8a89;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.ch-r2 .un{width:8px;height:8px;border-radius:50%;background:var(--coral);flex:none}
+.ch--un .ch-r2 small{color:#e7e6e5;font-weight:600}
+.metb{display:inline-flex;align-items:center;gap:4px;font-size:8.5px;letter-spacing:.11em;font-weight:700;
+  color:var(--session-green,#4cd787);margin-top:6px}
+.metb svg{width:10px;height:10px;stroke-width:2.6}
+
+/* ---------- 06 conversation (design-system spec) ----------------------
+   Smaller type throughout than the rest of the app screens: this one is
+   dense by nature, and at the site's scale it reads as crowded otherwise.
+   -------------------------------------------------------------------- */
+.cvh{display:flex;align-items:center;gap:9px;padding:2px 0 11px;flex:none}
+.cvh b{flex:1;min-width:0;font:400 19px/1 Anton,Impact,sans-serif;letter-spacing:-.01em}
+.cvback{width:22px;height:22px;display:grid;place-items:center;flex:none;color:#fdfdfd}
+.cvback svg{width:17px;height:17px;stroke-width:2}
+
+.cvcard{background:#111010;border:1px solid #232222;border-radius:14px;padding:10px 11px;flex:none}
+.cvcard .r{display:flex;align-items:flex-start;gap:8px;font-size:10.5px;line-height:1.45;color:#b3b2b1}
+.cvcard .r + .r{margin-top:5px}
+.cvcard .r>svg{width:12px;height:12px;flex:none;margin-top:1px;color:#8b8a89}
+.cvcard .r b{color:#fdfdfd;font-weight:700}
+.cvhr{height:1px;background:#232222;margin:9px 0}
+.cvcard .r--i{align-items:center;gap:9px}
+.cvcard .r--i .im{flex:none}
+.cvcard .r--i .im s{width:17px;height:17px}
+.cvcard .r--i .im s svg{width:9px;height:9px}
+
+.ofs-msgs{display:flex;flex-direction:column;justify-content:flex-end;gap:7px;overflow:hidden;flex:1;
+  min-height:0;padding:12px 0 6px;
+  mask-image:linear-gradient(transparent,#000 12%);-webkit-mask-image:linear-gradient(transparent,#000 12%)}
+.cvsys{display:grid;justify-items:center;gap:2px;text-align:center;background:#161515;
+  border-radius:13px;padding:10px 12px;margin-bottom:5px}
+.cvsys b{font-size:12px;font-weight:700}
+.cvsys span{font-size:9.5px;color:#8b8a89}
+
+/* a face beside every bubble, both sides */
+.mrow{display:flex;align-items:flex-end;gap:6px}
+.mrow.me{justify-content:flex-end}
+.mrow img{width:22px;height:22px;border-radius:50%;object-fit:cover;flex:none;margin-bottom:1px}
+.m{max-width:76%;font-size:11px;line-height:1.42;padding:8px 11px;border-radius:14px}
+.m.them{background:#1c1b1b;border-bottom-left-radius:5px}
+.m.me{background:#fdfdfd;color:#070606;border-bottom-right-radius:5px;font-weight:500}
+.cvseen{text-align:right;font-size:9px;color:#7e7d7c;padding:2px 2px 0}
+
+.cvinput{display:flex;align-items:center;gap:9px;padding:9px 0 14px;flex:none}
+.cvinput .cam{width:20px;height:20px;flex:none;color:#b3b2b1}
+.cvinput .field{flex:1;min-width:0;background:#161515;border:1px solid #262525;border-radius:999px;
+  padding:10px 13px;font-size:11px;color:#7e7d7c}
+.cvinput .send{width:30px;height:30px;border-radius:999px;background:#fdfdfd;color:#070606;
+  display:grid;place-items:center;flex:none}
+.cvinput .send svg{width:14px;height:14px;stroke-width:2.1}
+
+/* ---------- 07 session sheet ---------- */
+.ofs-sheet{margin-top:auto;background:#0d0c0c;border:1px solid #242323;border-bottom:0;
+  border-radius:26px 26px 0 0;margin-left:-13px;margin-right:-13px;padding:11px 17px 18px;
+  box-shadow:0 -14px 34px rgba(0,0,0,.6)}
+.ofs-grab{display:block;width:38px;height:4px;border-radius:9px;background:#343333;margin:0 auto 4px}
+.ofs-meta{display:flex;gap:9px;margin-top:14px}
+.ofs-meta span{flex:1;min-width:0;display:grid;gap:3px;background:#151414;border:1px solid #232222;
+  border-radius:12px;padding:10px 8px;font-size:8px;letter-spacing:.1em;font-weight:700;color:#8b8a89;
+  text-transform:uppercase;white-space:nowrap;overflow:hidden}
+.ofs-meta b{font:400 19px/1 Anton,Impact,'Arial Narrow',sans-serif;color:#fdfdfd;letter-spacing:0}
+.ofs-row{display:flex;align-items:center;gap:11px;padding:12px 0;border-top:1px solid #1d1c1c}
+.ofs-row>svg{width:18px;height:18px;flex:none;color:#a7a6a5}
+.ofs-row>div{flex:1;min-width:0;display:grid;gap:2px}
+.ofs-row b{font-size:13px;font-weight:600}
+.ofs-row small{font-size:10px;color:#8b8a89;line-height:1.35}
+.ofs-row em{font-style:normal;font-size:11px;font-weight:700;color:#8b8a89;flex:none}
+.ofs-row .sw{width:38px;height:22px;border-radius:999px;background:#2c2b2b;flex:none;position:relative}
+.ofs-row .sw::after{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#7e7d7c}
+.ofs-row .sw.on{background:#fdfdfd}
+.ofs-row .sw.on::after{left:19px;background:#070606}
+.ofs-row.sm{padding:11px 0}
+.ofs-rows{margin-top:-1px}
+.ofs-end{all:unset;display:grid;place-items:center;width:100%;height:48px;border-radius:999px;margin-top:14px;
+  border:1px solid rgba(240,104,92,.55);color:var(--coral);font-size:14px;font-weight:700;cursor:default;
+  box-sizing:border-box}
+
+/* ---------- 08 profile + safety ---------- */
+.ofs-me{display:flex;align-items:center;gap:13px;margin-top:15px;flex:none}
+.ofs-me img{width:62px;height:62px;border-radius:50%;object-fit:cover;flex:none;
+  box-shadow:0 0 0 2px #070606,0 0 0 3.5px #fdfdfd}
+.ofs-me div{display:grid;gap:6px}
+.ofs-me b{font:400 29px/1 Anton,Impact,sans-serif}
+.ofs-vf{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;
+  color:var(--session-green,#4cd787)}
+.ofs-vf svg{width:12px;height:12px;stroke-width:2.2}
+.ofs-stat{display:flex;align-items:center;gap:10px;background:#131212;border:1px solid #242323;
+  border-radius:15px;padding:13px;margin-top:auto;margin-bottom:76px;flex:none}
+.ofs-stat b{font:400 27px/1 Anton,Impact,sans-serif;flex:none}
+.ofs-stat span{flex:1;font-size:11px;color:#9a9998;line-height:1.3}
+.ofs-stat svg{width:18px;height:18px;color:var(--coral);flex:none}
+
+
+
+/* ---------- map screen ---------- */
+.ofs-map{position:relative;flex:1;min-height:0;margin:0 -13px -0px;overflow:hidden;background:#121212}
+.ofs-map .mapbg{position:absolute;inset:0;width:100%;height:100%;display:block;stroke:none}
+.msearch{position:absolute;top:13px;left:50%;transform:translateX(-50%);z-index:4;
+  display:inline-flex;align-items:center;gap:7px;background:#fdfdfd;color:#070606;border-radius:999px;
+  padding:9px 15px;font-size:12px;font-weight:700;white-space:nowrap;box-shadow:0 6px 16px rgba(0,0,0,.55)}
+.msearch svg{width:13px;height:13px;stroke-width:2;flex:none}
+.mradius{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:152px;height:152px;
+  border-radius:50%;border:1.5px dashed rgba(253,253,253,.3);z-index:1}
+.mme{position:absolute;left:50%;top:52%;transform:translate(-50%,-78%);width:27px;height:44px;z-index:5}
+.mme img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 5px 9px rgba(0,0,0,.7))}
+.mpin{position:absolute;transform:translate(-50%,-50%);border-radius:50%;padding:3px;box-sizing:border-box;
+  background:rgba(253,253,253,.22);box-shadow:0 0 0 2px #070606,0 6px 12px rgba(0,0,0,.65);z-index:3}
+.mpin img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;box-shadow:0 0 0 1.5px #070606}
+.mpin.shared{background:conic-gradient(rgba(253,253,253,.22) 0 50%,#fdfdfd 50% 100%);
+  box-shadow:0 0 0 2px #070606,0 6px 12px rgba(0,0,0,.65),0 0 0 4px rgba(253,253,253,.9)}
+.mclu{position:absolute;transform:translate(-50%,-50%);min-width:33px;height:33px;padding:0 8px;
+  border-radius:999px;display:grid;place-items:center;font-size:12px;font-weight:700;
+  background:#070606;border:1.5px solid #fdfdfd;color:#fdfdfd;z-index:3}
+/* the map runs under the nav, so lift the nav clear of it */
+.ofs-map ~ .ofs-nav{background:#131212ee;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+
+/* ---------- capabilities grid ---------- */
+.caps{background:var(--paper);color:var(--black);padding:clamp(80px,10vw,145px) clamp(22px,8vw,130px)}
+.caps-head{display:flex;justify-content:space-between;align-items:end;gap:40px}
+.caps-head h2{font:400 clamp(58px,7.4vw,112px)/.96 Anton,Impact,sans-serif;letter-spacing:-.015em;margin:14px 0 0}
+.caps-head h2 i{font-style:normal;color:#8d8d8d}
+.caps-head>p{font-size:19px;line-height:1.45;max-width:340px;color:#5c5c5c;margin:0 0 6px}
+.caps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:70px;background:#dcdcdc}
+.cap{background:var(--paper);padding:30px 30px 34px}
+.cap-ic{width:38px;height:38px;color:var(--black);margin-bottom:26px}
+.cap-ic svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cap h3{font-size:19px;line-height:1.25;margin:0 0 11px;letter-spacing:-.01em}
+.cap p{font-size:14.5px;line-height:1.55;color:#5c5c5c;margin:0}
+
+/* ---------- early access band ---------- */
+.getin{background:#070606;color:var(--paper);padding:clamp(76px,9vw,130px) clamp(22px,8vw,130px);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.getin h2{font:400 clamp(52px,6.4vw,96px)/.97 Anton,Impact,sans-serif;letter-spacing:-.015em;margin:16px 0 0}
+.getin h2 i{font-style:normal;color:#767676}
+.getin-side p{font-size:17px;line-height:1.55;color:#b4b4b4;margin:0 0 26px}
+.getin-form{display:flex;gap:10px;flex-wrap:wrap;row-gap:14px}
+.getin-form input{flex:1;min-width:180px;height:56px;border-radius:999px;border:1px solid #3a3939;
+  background:#121111;color:var(--paper);padding:0 22px;font:600 15px 'Instrument Sans',Arial,sans-serif}
+.getin-form input::placeholder{color:#7e7d7c;font-weight:500}
+.getin-form input:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
+.getin-form button{all:unset;height:56px;min-width:150px;border-radius:999px;text-align:center;
+  background:linear-gradient(180deg,#fff,#dedede);color:#070606;font-size:15px;font-weight:700;cursor:pointer;
+  box-shadow:inset 0 1px #fff,0 5px 22px rgba(255,255,255,.2);transition:transform .2s}
+.getin-form button:hover{transform:translateY(-3px)}
+/* .getin-side p is more specific, so match it or it wins */
+.getin-side p.getin-note{font-size:12px;color:#7e7d7c;margin:28px 0 0;line-height:1.7}
+.getin-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.getin-tags span{font-size:10px;letter-spacing:.13em;font-weight:700;border:1px solid #3a3939;
+  border-radius:999px;padding:9px 13px;color:#b4b4b4}
+
+/* header cta */
+.header-cta{height:38px;min-width:0;padding:0 18px;gap:0;font-size:12.5px;border-radius:999px;
+  background:linear-gradient(180deg,#fff,#dedede);color:#070606;display:inline-flex;align-items:center;
+  font-weight:700;white-space:nowrap;transition:transform .2s}
+.header-cta:hover{transform:translateY(-2px)}
+
+/* ---------- uniform eyebrow spacing ----------------------------------
+   Every dash-rule label sits the same distance above the heading it
+   labels, in every section.
+   -------------------------------------------------------------------- */
+.intro .intro-grid,
+.how .section-heading h2,
+.appshow-head h2,
+.experience-head h2,
+.caps-head h2,
+.getin h2,
+.closing h2{margin-top:var(--eyebrow-gap,20px)}
+/* how-it-works stacked like the rest instead of eyebrow-beside-heading */
+.how .section-heading{display:block}
+.how .section-heading h2{text-align:left}
+.closing .eyebrow{justify-content:center}
+.closing h2{margin-bottom:40px}
+/* "Your call" used a side label; stack it like every other section */
+.control{display:block}
+.control-label{margin-bottom:0}
+.control h2{margin-top:var(--eyebrow-gap,20px)}
+
+
+/* ---------- match the original two-up phone to the .ofs frame ---------- */
+.two-views .phone{width:318px;height:652px;border:0;border-radius:44px;margin:0 auto;
+  box-shadow:0 0 0 8px #0a0a0a,0 0 0 10px #3c3c3c,0 26px 58px #000b;background:#070606}
+.two-views .phone .phone-screen{padding:14px 13px 0}
+.two-views .phone-nav{bottom:11px;left:11px;right:11px;height:57px;border-radius:19px;
+  background:#131212;border:1px solid #242323}
+.two-views .phone .phone-screen{display:flex;flex-direction:column}
+.two-views .showcase-grid{max-height:none;flex:1;min-height:0;overflow:hidden;align-content:start;
+  mask-image:linear-gradient(#000 52%,transparent 80%);-webkit-mask-image:linear-gradient(#000 52%,transparent 80%)}
+.two-views .phone-status{align-items:center}
+.two-views{align-items:start}
+
+
+/* both phones in the two-up share one title treatment */
+.two-views .phone-title{font:400 30px/1 Anton,Impact,sans-serif;letter-spacing:-.01em;
+  text-transform:none;padding-bottom:2px}
+
+
+/* ---------- hero type on the photo ------------------------------------
+   Two different jobs, two tokens from design-tokens.css.
+
+   REAL PEOPLE / REAL PLACES sit on a busy photo, so they take
+   --text-shadow-photo: a soft shadow for legibility, no hard edge.
+
+   IRL is the brand moment, so it takes --text-shadow-irl verbatim at its
+   authored 1px steps. Scaling that depth up with the type turned it into a
+   black slab that swallowed the photo and collided with the line beneath.
+   -------------------------------------------------------------------- */
+.hero h1 span{
+  text-shadow:0 2px 18px rgba(0,0,0,.55), 0 1px 2px rgba(0,0,0,.4);
+}
+.hero h1 em{
+  text-shadow:
+    1px 1px 0 #070606, 2px 2px 0 #070606, 3px 3px 0 #070606,
+    4px 4px 0 #070606, 5px 5px 0 #070606, 6px 6px 0 #070606,
+    7px 7px 0 #070606, 8px 8px 0 #070606,
+    9px 9px 0 #f0685c, 10px 10px 0 #f0685c;
+}
+/* clearance so the coral edge never touches the line below */
+.hero-bottom{margin-top:46px}
+
+/* ---------- responsive ---------- */
+@media(max-width:1150px){
+  .fgrid{grid-template-columns:repeat(2,1fr);gap:clamp(30px,4vw,54px) 26px}
+}
+@media(max-width:1000px){
+  .caps-grid{grid-template-columns:repeat(2,1fr)}
+  .getin{grid-template-columns:1fr;gap:34px}
+  .getin h2{margin-top:0}
+}
+@media(max-width:900px){
+  .appshow-head,.caps-head{display:block}
+  .frow{grid-template-columns:1fr;gap:38px;justify-items:center;text-align:center}
+  .frow .frow-art,.frow:nth-child(even) .frow-art{order:-1}
+  .frow-txt,.frow:nth-child(even) .frow-txt{max-width:460px;justify-self:center}
+  .frow-list{justify-items:start;display:inline-grid;text-align:left}
+  .appshow-head h2,.caps-head h2{margin-top:26px}
+  .appshow-head>p,.caps-head>p{margin:26px 0 0;max-width:420px}
+  .caps-grid{margin-top:46px}
+  .cap{padding:26px 24px 30px}
+  .cap-ic{margin-bottom:20px}
+}
+@media(max-width:820px){
+  .fgrid{grid-template-columns:1fr;gap:56px}
+}
+@media(max-width:620px){
+  .appshow{padding-top:78px;padding-bottom:70px}
+  .appshow,.caps,.getin{padding-left:23px;padding-right:23px}
+  .frows{gap:66px;margin-top:52px}
+  .frow-txt h3{font-size:clamp(34px,9vw,46px)}
+  .fgrid{grid-template-columns:1fr;gap:58px;margin-top:66px;padding-top:52px}
+  .appshow-head h2,.caps-head h2{font-size:clamp(52px,13vw,84px)}
+  .caps-grid{grid-template-columns:1fr}
+  .caps{padding-top:78px;padding-bottom:78px}
+  .getin{padding-top:72px;padding-bottom:72px}
+  .getin h2{font-size:clamp(46px,12vw,74px)}
+  .getin-form input,.getin-form button{width:100%;flex:none;min-width:0}
+  .header-cta{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .getin-form button,.header-cta{transition:none}
+}
+</style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Offlyne home"><img class="brand-pin" src="assets/offlyne-pin-coral.png" alt="" />offlyne</a>
+    <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#inside">The app</a><a href="#features">Features</a><a href="#about">About</a></nav>
+    <a class="header-cta" href="#get">Get on the Waitlist Now</a>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-photo" src="assets/group-of-friends.jpg" alt="Friends spending an evening together" />
+      <div class="hero-shade"></div>
+      <div class="hero-topline"><span>THE APP FOR FINDING YOUR PEOPLE</span><span>01 / 04</span></div>
+      <div class="hero-copy">
+        <h1 id="hero-title"><span>REAL PEOPLE</span><span>REAL PLACES</span><em>IRL</em></h1>
+        <div class="hero-bottom"><p>A little curiosity<br />A lot of connection</p><a class="pill pill-primary" href="#how-it-works">See how it works <span aria-hidden="true">&#8599;</span></a></div>
+      </div>
+      <div class="photo-credit"></div>
+    </section>
+
+    <section class="intro section-pad" id="about">
+      <div class="eyebrow"><span class="eyebrow-line"></span> THE IDEA</div>
+      <div class="intro-grid"><h2>Look around<br /><i>Your people are here</i></h2><div class="intro-copy"><p>You&#8217;re already out. At a restaurant, a bar, a caf&#233;, a conference, or just walking down the street. With family, with friends, or doing your own thing. Your people are out there. You just haven&#8217;t met them yet</p><p>New friends. A little chemistry. Your next big opportunity. Whatever brings you out, meet people who are open to it too</p></div></div>
+    </section>
+
+    <section class="how section-pad" id="how-it-works">
+      <div class="section-heading"><div class="eyebrow"><span class="eyebrow-line"></span> HOW IT WORKS</div><h2>From here<br />to <i>hello</i></h2></div>
+      <div class="steps">
+        <article class="step"><span class="step-index">01</span><div class="step-icon" aria-hidden="true">&#9678;</div><h3>Go live where you are</h3><p>Already out? Go live and see who&#8217;s at your venue or nearby. Choose what you&#8217;re looking for, and go invisible whenever you want</p></article>
+        <article class="step"><span class="step-index">02</span><div class="step-icon" aria-hidden="true">&#9671;</div><h3>See who&#39;s around</h3><p>See who&#8217;s at your same venue or just nearby, and who you might just click with</p></article>
+        <article class="step"><span class="step-index">03</span><div class="step-icon" aria-hidden="true">&#8599;</div><h3>Connect</h3><p>Request to connect and meet IRL. Right there and then</p></article>
+        <article class="step"><span class="step-index">04</span><div class="step-icon" aria-hidden="true">&#10003;</div><h3>Make it real</h3><p>Message and chat all in the app. Start your IRL connection before the timer runs out</p></article>
+      </div>
+    </section>
+
+    <section class="experience section-pad" id="experience">
+      <div class="experience-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE EXPERIENCE</div><h2>Made for<br /><i>the moment</i></h2></div><p>A mobile experience built around the outing you&#8217;re already on. You decide when to show up, who you&#8217;re open to meeting, and when to go invisible</p></div>
+      <div class="showcase-label"><strong>See the room differently</strong><span>At your venue. Around the corner</span></div>
+      <div class="phone-stage two-views"><div class="view-column"><div class="view-label">AT YOUR VENUE <span>Grid view</span></div><div class="phone" aria-label="Grid view"><div class="phone-screen"><div class="phone-status"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="phone-title"><span>Who&#8217;s around</span><span class="live-dot">&#9679; LIVE</span></div><div class="venue">Bar Pisellino <span>&#8964;</span></div><div class="segmented"><span class="selected">Grid</span><span class="">Map</span></div><div class="tiles showcase-grid" tabindex="0" aria-label="Scroll through profiles"><div class="tile"><img loading="lazy" src="assets/maya.jpg" alt="Profile: Maya" /><div><strong>Maya</strong><small>Friends</small></div></div><div class="tile"><img loading="lazy" src="assets/jordan.jpg" alt="Profile: Jordan" /><div><strong>Jordan</strong><small>Friends</small></div></div><div class="tile"><img loading="lazy" src="assets/nina.jpg" alt="Profile: Nina" /><div><strong>Nina</strong><small>Dating</small></div></div><div class="tile"><img loading="lazy" src="assets/marcus.jpg" alt="Profile: Marcus" /><div><strong>Marcus</strong><small>Dating</small></div></div><div class="tile"><img loading="lazy" src="assets/elias.jpg" alt="Profile: Elias" /><div><strong>Elias</strong><small>Friends + Dating</small></div></div><div class="tile"><img loading="lazy" src="assets/chloe.jpg" alt="Profile: Chloe" /><div><strong>Chloe</strong><small>Friends + Dating</small></div></div><div class="tile"><img loading="lazy" src="assets/miles.jpg" alt="Profile: Miles" /><div><strong>Miles</strong><small>Network</small></div></div><div class="tile"><img loading="lazy" src="assets/talia.jpg" alt="Profile: Talia" /><div><strong>Talia</strong><small>Network</small></div></div><div class="tile"><img loading="lazy" src="assets/camille.jpg" alt="Profile: Camille" /><div><strong>Camille</strong><small>Friends + Network</small></div></div><div class="tile"><img loading="lazy" src="assets/andre.jpg" alt="Profile: Andre" /><div><strong>Andre</strong><small>Friends + Network</small></div></div><div class="tile"><img loading="lazy" src="assets/sofia.jpg" alt="Profile: Sofia" /><div><strong>Sofia</strong><small>Friends + Dating + Network</small></div></div><div class="tile"><img loading="lazy" src="assets/amara.jpg" alt="Profile: Amara" /><div><strong>Amara</strong><small>Friends + Dating + Network</small></div></div><div class="tile"><img loading="lazy" src="assets/iris.jpg" alt="Profile: Iris" /><div><strong>Iris</strong><small>Dating + Network</small></div></div><div class="tile"><img loading="lazy" src="assets/mateo.jpg" alt="Profile: Mateo" /><div><strong>Mateo</strong><small>Dating + Network</small></div></div></div><div class="phone-nav"><span>&#9018;<small>Around</small></span><span>&#9719;<small>Now</small></span><span class="nav-live">&#9673;<small>Live</small></span><span>&#9634;<small>Chats</small></span><span>&#9817;<small>Profile</small></span></div></div></div></div><div class="view-column"><div class="view-label">IN YOUR NEIGHBORHOOD <span>Map view</span></div><div class="ofs " role="img" aria-label="Map view showing who is live around you"><div class="ofs-scr"><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="ofs-top"><div class="ofs-h1">Who&#8217;s around</div><span class="ofs-ib"><svg viewBox="0 0 24 24"><path d="M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3"/><path d="M14 2v4M8 10v4M16 18v4"/></svg></span></div><div class="ofs-strip"><i class="ld"></i><div><b>Live at Bar Pisellino<span> &#183; 38m left</span></b><span class="ofs-strip-i"><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="no" title="Dating — not set"></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span>You&#8217;re open to Friends + Network</span></div></div><div class="ofs-seg2"><span><svg viewBox="0 0 24 24"><rect x="3.4" y="3.4" width="7.2" height="7.2" rx="1.4"/><rect x="13.4" y="3.4" width="7.2" height="7.2" rx="1.4"/><rect x="3.4" y="13.4" width="7.2" height="7.2" rx="1.4"/><rect x="13.4" y="13.4" width="7.2" height="7.2" rx="1.4"/></svg>Grid</span><span class="on"><svg viewBox="0 0 24 24"><path d="M14.1 5.6a2 2 0 0 0 1.8 0l3.6-1.8a1 1 0 0 1 1.5.9v12.7a1 1 0 0 1-.6.9l-4.5 2.3a2 2 0 0 1-1.8 0l-4.2-2.1a2 2 0 0 0-1.8 0l-3.6 1.8a1 1 0 0 1-1.5-.9V6.6a1 1 0 0 1 .6-.9l4.5-2.3a2 2 0 0 1 1.8 0z"/><path d="M15 5.8v15"/><path d="M9 3.2v15"/></svg>Map</span></div><div class="ofs-map"><svg class="mapbg" viewBox="0 0 320 500" preserveAspectRatio="xMidYMid slice"><rect width="320" height="500" fill="#121212"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-504" y2="-274"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-482" y2="-252"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-460" y2="-230"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-438" y2="-208"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-416" y2="-186"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-394" y2="-164"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-372" y2="-142"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-350" y2="-120"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-328" y2="-98"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-306" y2="-76"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-284" y2="-54"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-262" y2="-32"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-240" y2="-10"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-218" y2="12"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-196" y2="34"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-174" y2="56"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-152" y2="78"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-130" y2="100"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-108" y2="122"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-86" y2="144"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-64" y2="166"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-42" y2="188"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="-20" y2="210"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="2" y2="232"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="24" y2="254"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="46" y2="276"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="68" y2="298"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="90" y2="320"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="112" y2="342"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="134" y2="364"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="156" y2="386"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="178" y2="408"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="200" y2="430"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="222" y2="452"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="244" y2="474"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="266" y2="496"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="288" y2="518"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="310" y2="540"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="332" y2="562"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="354" y2="584"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="376" y2="606"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="398" y2="628"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="420" y2="650"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="442" y2="672"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="464" y2="694"/><line stroke="#1a1a1a" stroke-width="1.2" x1="-100" x2="500" y1="486" y2="716"/><line stroke="#2e2e2e" stroke-width="3" x1="0" x2="-260" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="62" x2="-198" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="124" x2="-136" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="186" x2="-74" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="248" x2="-12" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="310" x2="50" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="372" x2="112" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="434" x2="174" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="496" x2="236" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="558" x2="298" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="620" x2="360" y1="-50" y2="760"/><line stroke="#2e2e2e" stroke-width="3" x1="682" x2="422" y1="-50" y2="760"/></svg><span class="msearch"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M3 21v-5h5"/></svg>Search this area</span><span class="mradius"></span><span class="mme"><img src="assets/offlyne-pin-coral.png" alt="You"></span><span class="mpin" style="left:29%;top:24%;width:38px;height:38px"><img src="assets/maya.jpg" alt=""></span><span class="mpin" style="left:60%;top:16%;width:38px;height:38px"><img src="assets/jordan.jpg" alt=""></span><span class="mpin shared" style="left:76%;top:46%;width:50px;height:50px"><img src="assets/nina.jpg" alt=""></span><span class="mpin shared" style="left:34%;top:62%;width:38px;height:38px"><img src="assets/marcus.jpg" alt=""></span><span class="mclu" style="left:87%;top:30%">+3</span><span class="mclu" style="left:16%;top:11%">+2</span></div><div class="ofs-nav"><i class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg><u>Around</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h5.3l-.6 8.1 8.7-10.9h-5.4z"/></svg><u>Now</u></i><i class="live"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/></svg><u>Live</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M20.5 12.2c0 4.1-3.8 7.4-8.5 7.4a9.7 9.7 0 0 1-2.6-.35L4.2 21l1.1-3.6a7 7 0 0 1-1.8-4.6c0-4.1 3.8-7.4 8.5-7.4s8.5 3.3 8.5 7.4z"/></svg><b class="dot"></b><u>Chats</u></i><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.4 20.4a7.9 7.9 0 0 1 15.2 0"/></svg><u>You</u></i></div></div><span class="ofs-notch"></span></div></div></div>
+    </section>
+
+    <section class="appshow" id="inside">
+      <div class="appshow-head">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> THE APP</div><h2>Less scrolling<br /><i>More hello</i></h2></div>
+        <p>Offlyne only wakes up when you do. Turn it on where you already are, and the people around you become people you can actually meet</p>
+      </div>
+      <div class="frows"><div class="frow"><div class="frow-txt"><span class="frow-k">GO LIVE</span><h3>You&#8217;re already out<br />Turn it on</h3><p>One tap and Offlyne knows you&#8217;re here. Pick what you&#8217;re open to tonight &#8212; Friends, Dating, Network, or all three &#8212; and how long you want to be seen</p><ul class="frow-list"><li>Your venue, detected for you</li><li>Change your mind mid&#8209;session</li><li>Nobody sees you until you go live</li></ul></div><div class="frow-art"><div class="ofs " role="img" aria-label="Go live screen: pick your venue and intentions"><div class="ofs-scr"><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="ofs-h1">Go live</div><div class="ofs-venue"><svg viewBox="0 0 24 24"><path d="M12 21.2s6.6-6 6.6-11a6.6 6.6 0 0 0-13.2 0c0 5 6.6 11 6.6 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span><b>Bar Pisellino</b><small>West Village · detected</small></span><em>Change</em></div><div class="ofs-lbl">I'm here for</div><div class="ofs-picks"><button class="pick on"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg><b>Friends</b><i><svg viewBox="0 0 24 24"><path d="M4.8 12.6 9.6 17.4 19.2 6.9"/></svg></i></button><button class="pick"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg><b>Dating</b><i></i></button><button class="pick on"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg><b>Network</b><i><svg viewBox="0 0 24 24"><path d="M4.8 12.6 9.6 17.4 19.2 6.9"/></svg></i></button></div><div class="ofs-lbl">Visible for</div><div class="ofs-seg3"><span>1 hr</span><span class="on">2 hrs</span><span>Till I stop</span></div><div class="ofs-fine">Only people live at your venue or nearby can see you. Go invisible any time.</div><button class="ofs-cta">Go live<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/></svg></button><div class="ofs-nav"><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg><u>Around</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h5.3l-.6 8.1 8.7-10.9h-5.4z"/></svg><u>Now</u></i><i class="on live"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/></svg><u>Live</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M20.5 12.2c0 4.1-3.8 7.4-8.5 7.4a9.7 9.7 0 0 1-2.6-.35L4.2 21l1.1-3.6a7 7 0 0 1-1.8-4.6c0-4.1 3.8-7.4 8.5-7.4s8.5 3.3 8.5 7.4z"/></svg><b class="dot"></b><u>Chats</u></i><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.4 20.4a7.9 7.9 0 0 1 15.2 0"/></svg><u>You</u></i></div></div><span class="ofs-notch"></span></div></div></div><div class="frow"><div class="frow-txt"><span class="frow-k">WHO&#8217;S AROUND</span><h3>See who&#8217;s actually<br />in the room</h3><p>Not a feed of strangers across the city. The people at your venue right now, and a few around the corner. The marks beside each name show what you already have in common</p><ul class="frow-list"><li>Same venue first, then nearby</li><li>Shared intentions at a glance</li><li>Flip to the map to see the block</li></ul></div><div class="frow-art"><div class="ofs " role="img" aria-label="Grid of people nearby with shared intentions"><div class="ofs-scr"><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="ofs-top"><div class="ofs-h1">Who&#8217;s around</div><span class="ofs-ib"><svg viewBox="0 0 24 24"><path d="M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3"/><path d="M14 2v4M8 10v4M16 18v4"/></svg></span></div><div class="ofs-strip"><i class="ld"></i><div><b>Live at Bar Pisellino<span> · 38m left</span></b><span class="ofs-strip-i"><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="no" title="Dating — not set"></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span>You're open to Friends + Network</span></div></div><div class="ofs-seg2"><span class="on"><svg viewBox="0 0 24 24"><rect x="3.4" y="3.4" width="7.2" height="7.2" rx="1.4"/><rect x="13.4" y="3.4" width="7.2" height="7.2" rx="1.4"/><rect x="3.4" y="13.4" width="7.2" height="7.2" rx="1.4"/><rect x="13.4" y="13.4" width="7.2" height="7.2" rx="1.4"/></svg>Grid</span><span><svg viewBox="0 0 24 24"><path d="M14.1 5.6a2 2 0 0 0 1.8 0l3.6-1.8a1 1 0 0 1 1.5.9v12.7a1 1 0 0 1-.6.9l-4.5 2.3a2 2 0 0 1-1.8 0l-4.2-2.1a2 2 0 0 0-1.8 0l-3.6 1.8a1 1 0 0 1-1.5-.9V6.6a1 1 0 0 1 .6-.9l4.5-2.3a2 2 0 0 1 1.8 0z"/><path d="M15 5.8v15"/><path d="M9 3.2v15"/></svg>Map</span></div><div class="ofs-grid"><div class="gt"><img loading="lazy" src="assets/maya.jpg" alt=""><div class="gt-m"><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="no" title="Dating — not set"></s><s class="no" title="Network — not set"></s></span></div><div class="gt-b"><strong>Maya</strong><small>Here now</small></div></div><div class="gt"><img loading="lazy" src="assets/jordan.jpg" alt=""><div class="gt-m"><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="no" title="Dating — not set"></s><s class="no" title="Network — not set"></s></span></div><div class="gt-b"><strong>Jordan</strong><small>2 min away</small></div></div><div class="gt"><img loading="lazy" src="assets/nina.jpg" alt=""><div class="gt-m"><span class="im" role="img" aria-label="Intentions"><s class="no" title="Friends — not set"></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="no" title="Network — not set"></s></span></div><div class="gt-b"><strong>Nina</strong><small>Here now</small></div></div><div class="gt"><img loading="lazy" src="assets/marcus.jpg" alt=""><div class="gt-m"><span class="im" role="img" aria-label="Intentions"><s class="no" title="Friends — not set"></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="no" title="Network — not set"></s></span></div><div class="gt-b"><strong>Marcus</strong><small>2 min away</small></div></div><div class="gt"><img loading="lazy" src="assets/elias.jpg" alt=""><div class="gt-m"><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="no" title="Network — not set"></s></span></div><div class="gt-b"><strong>Elias</strong><small>Here now</small></div></div><div class="gt"><img loading="lazy" src="assets/chloe.jpg" alt=""><div class="gt-m"><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="no" title="Network — not set"></s></span></div><div class="gt-b"><strong>Chloe</strong><small>2 min away</small></div></div><div class="gt"><img loading="lazy" src="assets/miles.jpg" alt=""><div class="gt-m"><span class="im" role="img" aria-label="Intentions"><s class="no" title="Friends — not set"></s><s class="no" title="Dating — not set"></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span></div><div class="gt-b"><strong>Miles</strong><small>Here now</small></div></div><div class="gt"><img loading="lazy" src="assets/talia.jpg" alt=""><div class="gt-m"><span class="im" role="img" aria-label="Intentions"><s class="no" title="Friends — not set"></s><s class="no" title="Dating — not set"></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span></div><div class="gt-b"><strong>Talia</strong><small>2 min away</small></div></div></div><div class="ofs-nav"><i class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg><u>Around</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h5.3l-.6 8.1 8.7-10.9h-5.4z"/></svg><u>Now</u></i><i class="live"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/></svg><u>Live</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M20.5 12.2c0 4.1-3.8 7.4-8.5 7.4a9.7 9.7 0 0 1-2.6-.35L4.2 21l1.1-3.6a7 7 0 0 1-1.8-4.6c0-4.1 3.8-7.4 8.5-7.4s8.5 3.3 8.5 7.4z"/></svg><b class="dot"></b><u>Chats</u></i><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.4 20.4a7.9 7.9 0 0 1 15.2 0"/></svg><u>You</u></i></div></div><span class="ofs-notch"></span></div></div></div><div class="frow"><div class="frow-txt"><span class="frow-k">THE REVEAL</span><h3>Say hello without<br />the guesswork</h3><p>You can already see what you&#8217;re both here for, so there&#8217;s nothing to decode. Send a request, and if they&#8217;re in, you&#8217;re talking in seconds</p><ul class="frow-list"><li>Filled marks mean you both picked it</li><li>One tap to ask, one to pass</li><li>No reply needed, no awkwardness</li></ul></div><div class="frow-art"><div class="ofs ofs--photo" role="img" aria-label="Profile with shared intentions and a request-to-connect button"><div class="ofs-scr"><img class="ofs-hero" src="assets/sofia.jpg" alt=""><div class="ofs-hero-sh"></div><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="ofs-top ofs-top--over"><span class="ofs-ib gl"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></span><span class="ofs-ib gl"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M5.8 5.8l12.4 12.4"/></svg></span></div><div class="ofs-rev"><span class="ofs-here">● HERE NOW · SAME VENUE</span><div class="ofs-name">Sofia</div><div class="ofs-chips"><span class="ichip ichip--sh"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg>Friends</span><span class="ichip ichip--sh"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg>Network</span><span class="ichip ichip--th"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg>Dating</span></div><p class="ofs-bio">Product designer. Just moved to the neighbourhood and trying to meet people who actually leave the house.</p><div class="ofs-shared"><b>2 shared</b><span>You both picked Friends and Network</span></div><div class="ofs-acts"><button class="ofs-cta">Request to connect<svg viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h5.3l-.6 8.1 8.7-10.9h-5.4z"/></svg></button><button class="ofs-ghost">Not now</button></div></div></div><span class="ofs-notch"></span></div></div></div><div class="frow"><div class="frow-txt"><span class="frow-k">THE MOMENT</span><h3>Meet before<br />the moment passes</h3><p>The thread opens the second you both say yes, and it already carries where you met, when, and what you each chose. Nobody has to work out who this was</p><ul class="frow-list"><li>Where and when you connected, up top</li><li>A face beside every message</li><li>Confirm you met and they stay in your list</li></ul></div><div class="frow-art"><div class="ofs " role="img" aria-label="Conversation showing where and when you connected"><div class="ofs-scr"><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="cvh"><span class="cvback"><svg viewBox="0 0 24 24"><path d="M15 5.5 8.5 12l6.5 6.5"/></svg></span><b>Sofia</b><span class="ofs-ib sm"><svg viewBox="0 0 24 24"><path d="M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3"/><path d="M14 2v4M8 10v4M16 18v4"/></svg></span></div><div class="cvcard"><div class="r"><svg viewBox="0 0 24 24"><path d="M12 21.2s6.6-6 6.6-11a6.6 6.6 0 0 0-13.2 0c0 5 6.6 11 6.6 11z"/><circle cx="12" cy="10" r="2.4"/></svg><span>Met at <b>Bar Pisellino</b>, Gramercy</span></div><div class="r"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.4V12l3 2"/></svg><span>Tonight, <b>9:26 pm</b> &#183; this session</span></div><div class="cvhr"></div><div class="r r--i"><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span><span>You both chose <b>Friends and Network</b>. She is also open to Dating</span></div></div><div class="ofs-msgs"><div class="cvsys"><b>you&#8217;re offlyne!</b><span>You and Sofia both said yes &#183; 9:26 pm</span></div><div class="mrow them"><img src="assets/sofia.jpg" alt=""><div class="m them">Hi! The one at the back by the window?</div></div><div class="mrow me"><div class="m me">Guilty. You're the green coat?</div><img src="assets/amara.jpg" alt=""></div><div class="mrow them"><img src="assets/sofia.jpg" alt=""><div class="m them">That's me. Come say hi properly?</div></div><div class="mrow me"><div class="m me">On my way &#8212; grabbing a drink first</div><img src="assets/amara.jpg" alt=""></div><div class="cvseen">Seen 9:40 pm</div></div><div class="cvinput"><span class="cam"><svg viewBox="0 0 24 24"><path d="M3.5 8.5h3.1l1.6-2.4h7.6l1.6 2.4h3.1a1 1 0 0 1 1 1v8.4a1 1 0 0 1-1 1H3.5a1 1 0 0 1-1-1V9.5a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.4" r="3.4"/></svg></span><span class="field">Message Sofia</span><span class="send"><svg viewBox="0 0 24 24"><path d="M21 4 10.6 14.4"/><path d="M21 4l-6.8 17-3.6-6.6L4 10.8z"/></svg></span></div></div><span class="ofs-notch"></span></div></div></div><div class="frow"><div class="frow-txt"><span class="frow-k">YOUR CALL</span><h3>Invisible whenever<br />you want</h3><p>Stay live to see who&#8217;s around you, or go invisible mid&#8209;session. That pauses the session and switches your location off &#8212; nobody sees you and you don&#8217;t see them. The countdown keeps running either way</p><ul class="frow-list"><li>Pauses the session, not the clock</li><li>Location off the moment you hide</li><li>Nobody sees you, you see nobody</li></ul></div><div class="frow-art"><div class="ofs ofs--photo" role="img" aria-label="Session controls: change intentions, go invisible, end session"><div class="ofs-scr"><img class="ofs-hero ofs-hero--dim" src="assets/group-of-friends.jpg" alt=""><div class="ofs-scrim"></div><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="ofs-sheet"><span class="ofs-grab"></span><div class="ofs-h2">Your session</div><div class="ofs-meta"><span><b>1h 22m</b>live</span><span><b>14</b>nearby</span><span><b>3</b>requests</span></div><div class="ofs-lbl">Change what you're here for</div><div class="ofs-picks ofs-picks--row"><button class="pick on"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg><b>Friends</b></button><button class="pick"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg><b>Dating</b></button><button class="pick on"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg><b>Network</b></button></div><div class="ofs-row"><svg viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.3A8.9 8.9 0 0 1 12 6.2c5 0 9 5.8 9 5.8a17 17 0 0 1-2.4 3"/><path d="M6.3 8.1A17.6 17.6 0 0 0 3 12s4 5.8 9 5.8a8.7 8.7 0 0 0 3.4-.7"/><path d="M9.9 10.2a3 3 0 0 0 4.1 4.2"/></svg><div><b>Go invisible</b><small>Pauses the session, location off</small></div><i class="sw"></i></div><div class="ofs-row"><svg viewBox="0 0 24 24"><path d="M12 21.2s6.6-6 6.6-11a6.6 6.6 0 0 0-13.2 0c0 5 6.6 11 6.6 11z"/><circle cx="12" cy="10" r="2.4"/></svg><div><b>Venue only</b><small>Show me to people here, not nearby</small></div><i class="sw on"></i></div><button class="ofs-end">End session</button><p class="ofs-fine ofs-fine--c">Requests end with the session. Connections you both confirmed stay.</p></div></div><span class="ofs-notch"></span></div></div></div></div>
+      <div class="fgrid"><div class="fcell"><div class="fcell-art"><div class="ofs " role="img" aria-label="Incoming and outgoing connection requests"><div class="ofs-scr"><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="ofs-top"><div class="ofs-h1">Requests</div><span class="ofs-ib"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 4.4 1.5 5.9 1.5 5.9H4.5S6 13.4 6 9z"/><path d="M10 18.6a2.2 2.2 0 0 0 4 0"/></svg><b class="dot"></b></span></div><div class="ofs-tabs"><span class="on">To you <b>3</b></span><span>From you <b>2</b></span></div><div class="ofs-list"><div class="rq"><img src="assets/nina.jpg" alt=""><div class="rq-t"><b>Nina</b><span class="im" role="img" aria-label="Intentions"><s class="no" title="Friends — not set"></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="no" title="Network — not set"></s></span><small>At the bar · Sent 2 min ago</small></div><div class="rq-a"><button class="yes"><svg viewBox="0 0 24 24"><path d="M4.8 12.6 9.6 17.4 19.2 6.9"/></svg></button><button class="no"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div><div class="rq"><img src="assets/miles.jpg" alt=""><div class="rq-t"><b>Miles</b><span class="im" role="img" aria-label="Intentions"><s class="no" title="Friends — not set"></s><s class="no" title="Dating — not set"></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span><small>Same venue · Sent 6 min ago</small></div><div class="rq-a"><button class="yes"><svg viewBox="0 0 24 24"><path d="M4.8 12.6 9.6 17.4 19.2 6.9"/></svg></button><button class="no"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div><div class="rq"><img src="assets/camille.jpg" alt=""><div class="rq-t"><b>Camille</b><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="no" title="Dating — not set"></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span><small>120m away · Sent 11 min ago</small></div><div class="rq-a"><button class="yes"><svg viewBox="0 0 24 24"><path d="M4.8 12.6 9.6 17.4 19.2 6.9"/></svg></button><button class="no"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div><div class="ofs-div">From you</div><div class="rq rq--sent"><img src="assets/elias.jpg" alt=""><div class="rq-t"><b>Elias</b><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="no" title="Network — not set"></s></span><small>Waiting · expires with your session</small></div><span class="pend">Pending</span></div><div class="rq rq--sent"><img src="assets/talia.jpg" alt=""><div class="rq-t"><b>Talia</b><span class="im" role="img" aria-label="Intentions"><s class="no" title="Friends — not set"></s><s class="no" title="Dating — not set"></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span><small>Waiting · expires with your session</small></div><span class="pend">Pending</span></div></div><div class="ofs-nav"><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg><u>Around</u></i><i class="on"><svg viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h5.3l-.6 8.1 8.7-10.9h-5.4z"/></svg><u>Now</u></i><i class="live"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/></svg><u>Live</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M20.5 12.2c0 4.1-3.8 7.4-8.5 7.4a9.7 9.7 0 0 1-2.6-.35L4.2 21l1.1-3.6a7 7 0 0 1-1.8-4.6c0-4.1 3.8-7.4 8.5-7.4s8.5 3.3 8.5 7.4z"/></svg><b class="dot"></b><u>Chats</u></i><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.4 20.4a7.9 7.9 0 0 1 15.2 0"/></svg><u>You</u></i></div></div><span class="ofs-notch"></span></div></div><h3>Invites that don&#8217;t pile up</h3><p>Requests belong to the session they were sent in. Nothing follows you home</p></div><div class="fcell"><div class="fcell-art"><div class="ofs " role="img" aria-label="Conversation list showing shared intentions per person"><div class="ofs-scr"><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="ofs-top"><div class="ofs-h1">My Offlynes</div><span class="ofs-ib"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.4V12l3 2"/></svg></span></div><div class="ofs-tabs"><span class="on">All</span><span>This session</span><span>Met IRL</span></div><div class="ofs-list"><div class="ch ch--un"><img src="assets/maya.jpg" alt=""><div class="ch-t"><div class="ch-r1"><b>Maya</b><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="no" title="Dating — not set"></s><s class="no" title="Network — not set"></s></span><span class="ch-ti">now</span></div><div class="ch-r2"><small>Grabbing a table by the window</small><u class="un"></u></div><span class="metb"><svg viewBox="0 0 24 24"><path d="M4.8 12.6 9.6 17.4 19.2 6.9"/></svg>MET IRL</span></div></div><div class="ch ch--un"><img src="assets/sofia.jpg" alt=""><div class="ch-t"><div class="ch-r1"><b>Sofia</b><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span><span class="ch-ti">2m</span></div><div class="ch-r2"><small>Ha, same. I'm the one in the green coat</small><u class="un"></u></div></div></div><div class="ch"><img src="assets/miles.jpg" alt=""><div class="ch-t"><div class="ch-r1"><b>Miles</b><span class="im" role="img" aria-label="Intentions"><s class="no" title="Friends — not set"></s><s class="no" title="Dating — not set"></s><s class="sh" title="Network — shared"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg></s></span><span class="ch-ti">1h</span></div><div class="ch-r2"><small>You: I'll send over that deck tomorrow</small></div><span class="metb"><svg viewBox="0 0 24 24"><path d="M4.8 12.6 9.6 17.4 19.2 6.9"/></svg>MET IRL</span></div></div><div class="ch"><img src="assets/chloe.jpg" alt=""><div class="ch-t"><div class="ch-r1"><b>Chloe</b><span class="im" role="img" aria-label="Intentions"><s class="sh" title="Friends — shared"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></s><s class="th" title="Dating — theirs"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg></s><s class="no" title="Network — not set"></s></span><span class="ch-ti">Yest</span></div><div class="ch-r2"><small>Session ended — say hi again next time</small></div></div></div></div><div class="ofs-nav"><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg><u>Around</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h5.3l-.6 8.1 8.7-10.9h-5.4z"/></svg><u>Now</u></i><i class="live"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/></svg><u>Live</u></i><i class="on"><svg viewBox="0 0 24 24"><path d="M20.5 12.2c0 4.1-3.8 7.4-8.5 7.4a9.7 9.7 0 0 1-2.6-.35L4.2 21l1.1-3.6a7 7 0 0 1-1.8-4.6c0-4.1 3.8-7.4 8.5-7.4s8.5 3.3 8.5 7.4z"/></svg><u>Chats</u></i><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.4 20.4a7.9 7.9 0 0 1 15.2 0"/></svg><u>You</u></i></div></div><span class="ofs-notch"></span></div></div><h3>Everyone you actually met</h3><p>Threads stay for the people you both confirmed in person, marked so you know</p></div><div class="fcell"><div class="fcell-art"><div class="ofs " role="img" aria-label="Profile with verification, safety controls and blocked list"><div class="ofs-scr"><div class="ofs-bar"><span>9:41</span><span class="ofs-bar-r"><i class="sig"></i><i class="sig"></i><i class="sig"></i><i class="bat"></i></span></div><div class="ofs-h1">You</div><div class="ofs-me"><img src="assets/amara.jpg" alt=""><div><b>Amara</b><span class="ofs-vf"><svg viewBox="0 0 24 24"><path d="M12 21.3c4.4-2 6.6-5.3 6.6-9.8V5.4L12 2.9 5.4 5.4v6.1c0 4.5 2.2 7.8 6.6 9.8z"/><path d="M9.2 11.9 11.5 14.2 15.2 9.9"/></svg>Verified</span></div></div><div class="ofs-lbl">Default intentions</div><div class="ofs-chips ofs-chips--tight"><span class="ichip ichip--sh"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg>Friends</span><span class="ichip ichip--sh"><svg viewBox="0 0 24 24"><path d="M12 20.3s-7.3-4.7-7.3-9.7a3.9 3.9 0 0 1 7.3-2.1 3.9 3.9 0 0 1 7.3 2.1c0 5-7.3 9.7-7.3 9.7z"/></svg>Dating</span><span class="ichip ichip--sh"><svg viewBox="0 0 24 24"><rect x="3" y="7.4" width="18" height="12.2" rx="2"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 12.6h18"/></svg>Network</span></div><div class="ofs-lbl">Safety</div><div class="ofs-rows"><div class="ofs-row sm"><svg viewBox="0 0 24 24"><path d="M12 21.3c4.4-2 6.6-5.3 6.6-9.8V5.4L12 2.9 5.4 5.4v6.1c0 4.5 2.2 7.8 6.6 9.8z"/><path d="M9.2 11.9 11.5 14.2 15.2 9.9"/></svg><div><b>Photo verification</b><small>Everyone on Offlyne is a verified human</small></div><em>Done</em></div><div class="ofs-row sm"><svg viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.3A8.9 8.9 0 0 1 12 6.2c5 0 9 5.8 9 5.8a17 17 0 0 1-2.4 3"/><path d="M6.3 8.1A17.6 17.6 0 0 0 3 12s4 5.8 9 5.8a8.7 8.7 0 0 0 3.4-.7"/><path d="M9.9 10.2a3 3 0 0 0 4.1 4.2"/></svg><div><b>Blocked &amp; hidden</b><small>People who can never see you live</small></div><em>4</em></div><div class="ofs-row sm"><svg viewBox="0 0 24 24"><path d="M12 21.2s6.6-6 6.6-11a6.6 6.6 0 0 0-13.2 0c0 5 6.6 11 6.6 11z"/><circle cx="12" cy="10" r="2.4"/></svg><div><b>Location precision</b><small>Venue-level. Never an exact address</small></div><em>Venue</em></div><div class="ofs-row sm"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M5.8 5.8l12.4 12.4"/></svg><div><b>Report a person</b><small>Reviewed by a human within 24 hours</small></div><em>›</em></div></div><div class="ofs-stat"><b>31</b><span>people met in real life</span><svg viewBox="0 0 24 24"><path d="M12 21.4c3.4 0 5.8-2.2 5.8-5.3 0-3.8-4-5.2-3.3-9.6-2.6.5-4 2.7-4 4.6 0 1.3-.7 1.9-1.4 1.9s-1.3-.5-1.5-1.6c-1 1.2-1.4 2.7-1.4 4.2 0 3.4 2.4 5.8 5.8 5.8z"/></svg></div><div class="ofs-nav"><i class=""><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg><u>Around</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h5.3l-.6 8.1 8.7-10.9h-5.4z"/></svg><u>Now</u></i><i class="live"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="3.4" fill="currentColor" stroke="none"/></svg><u>Live</u></i><i class=""><svg viewBox="0 0 24 24"><path d="M20.5 12.2c0 4.1-3.8 7.4-8.5 7.4a9.7 9.7 0 0 1-2.6-.35L4.2 21l1.1-3.6a7 7 0 0 1-1.8-4.6c0-4.1 3.8-7.4 8.5-7.4s8.5 3.3 8.5 7.4z"/></svg><b class="dot"></b><u>Chats</u></i><i class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.4 20.4a7.9 7.9 0 0 1 15.2 0"/></svg><u>You</u></i></div></div><span class="ofs-notch"></span></div></div><h3>Verified, and in your control</h3><p>Photo verification to go live, permanent blocks, and location that stops at the venue</p></div></div>
+    </section>
+
+    <section class="caps" id="features">
+      <div class="caps-head">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> WHAT IT DOES</div><h2>Everything<br /><i>a night needs</i></h2></div>
+        <p>Offlyne is small on purpose. Every feature exists to get two people from the same room to the same table</p>
+      </div>
+      <div class="caps-grid"><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg></div><h3>Live only when you are</h3><p>Offlyne has no endless feed. You appear when you go live at a place you're actually at, and you disappear when you stop. Nothing lingers</p></article><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16.6 6.3a3.3 3.3 0 0 1 0 6.5"/><path d="M18 14.6a6.2 6.2 0 0 1 3.3 5.4"/></svg></div><h3>Three intentions, one profile</h3><p>Friends, Dating and Network sit side by side. Pick any combination, change them mid-session, and see at a glance which ones you and someone else share</p></article><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21.2s6.6-6 6.6-11a6.6 6.6 0 0 0-13.2 0c0 5 6.6 11 6.6 11z"/><circle cx="12" cy="10" r="2.4"/></svg></div><h3>Venue-aware, not address-aware</h3><p>The app knows you're at the bar, not where you live. Sort by who's in the room with you or who's a few streets away</p></article><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.4V12l3 2"/></svg></div><h3>A session, not a subscription to someone</h3><p>Invitations live and die with your session. It keeps things light — and it means no one accumulates a backlog of people who never said hello</p></article><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 6.3A8.9 8.9 0 0 1 12 6.2c5 0 9 5.8 9 5.8a17 17 0 0 1-2.4 3"/><path d="M6.3 8.1A17.6 17.6 0 0 0 3 12s4 5.8 9 5.8a8.7 8.7 0 0 0 3.4-.7"/><path d="M9.9 10.2a3 3 0 0 0 4.1 4.2"/></svg></div><h3>Invisible without leaving</h3><p>Stay live to see who's around you, or go invisible mid-session. That pauses the session and turns your location off — nobody sees you, and you don't see them. The countdown keeps running</p></article><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.8 12.6 9.6 17.4 19.2 6.9"/></svg></div><h3>Confirm you met, keep the connection</h3><p>When you both confirm you met in person, the connection outlasts the session. Everything else clears out on its own</p></article><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.5 12.2c0 4.1-3.8 7.4-8.5 7.4a9.7 9.7 0 0 1-2.6-.35L4.2 21l1.1-3.6a7 7 0 0 1-1.8-4.6c0-4.1 3.8-7.4 8.5-7.4s8.5 3.3 8.5 7.4z"/></svg></div><h3>Chat built for the next ten minutes to 3 hours</h3><p>Threads open the moment a request is accepted, with a timer that nudges you to find each other rather than text for a week</p></article><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21.3c4.4-2 6.6-5.3 6.6-9.8V5.4L12 2.9 5.4 5.4v6.1c0 4.5 2.2 7.8 6.6 9.8z"/><path d="M9.2 11.9 11.5 14.2 15.2 9.9"/></svg></div><h3>Verified humans, reviewed reports</h3><p>Photo verification is required for your safety before you can go live. Blocks are permanent and invisible to the other person, and reports get read by a person</p></article><article class="cap"><div class="cap-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h5.3l-.6 8.1 8.7-10.9h-5.4z"/></svg></div><h3>Built for the density of real places</h3><p>Restaurants, bars, cafés, conferences, coworking floors. The people you see are the people you could walk up to in the next five minutes</p></article></div>
+    </section>
+
+    <section class="control section-pad"><div class="control-label"><span class="eyebrow-line"></span> YOUR CALL</div><div><h2>Your outing<br /><i>Your session</i></h2><p>Set your intentions, or change them during a session, pause visibility when you want, and end the session on your terms. Invitations belong to that session. But a connection lasts beyond it when you both confirm you met in person. This is Offlyne IRL</p></div></section>
+
+    <section class="getin" id="get">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line"></span> EARLY ACCESS</div>
+        <h2>Get in before<br /><i>your city does</i></h2>
+      </div>
+      <div class="getin-side">
+        <p>Offlyne opens city by city, because a room full of people beats an empty map. Join the list and we&#8217;ll let you know the moment yours is live</p>
+        <form class="getin-form" action="#get" method="post" onsubmit="return false">
+          <label class="skip" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required />
+          <button type="submit">Request access</button>
+        </form>
+        <p class="getin-note">One email when your city opens. Nothing else</p>
+        <div class="getin-tags"><span>iOS &amp; ANDROID</span><span>VERIFIED PROFILES</span><span>VENUE-LEVEL LOCATION</span></div>
+      </div>
+    </section>
+
+    <section class="closing section-pad"><span class="eyebrow">REAL PEOPLE &nbsp;REAL PLACES &nbsp;IN REAL LIFE</span><h2>Good things happen<br />when we show up<br /><i>In real life</i></h2><a class="pill pill-primary" href="#get">Get on the Waitlist Now <span aria-hidden="true">&#8599;</span></a></section>
+  </main>
+  <footer><a class="wordmark" href="#top" aria-label="Offlyne home"><img class="brand-pin" src="assets/offlyne-pin-coral.png" alt="" />offlyne</a><span>REAL PEOPLE &nbsp;REAL PLACES &nbsp;IN REAL LIFE</span><span>&#169; <span id="year">2026</span> Offlyne</span></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
